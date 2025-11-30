@@ -4,37 +4,6 @@
   <meta charset="UTF-8">
   <title>Battleships</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #8ecae6;
-      color: #222;
-    }
-    main {
-        display: flex;
-        flex-direction: row;
-    }
-    .boards-section {
-        background-color: red;
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        width: 80%;
-    }
-    .board-container{
-        width: 50%;
-
-    }
-    .sidebar {
-        background-color: yellow;
-        width: 20%;
-        text-align: center;
-    }
-    header {
-        text-align: center;
-    }
-  </style>
 </head>
 <body>
     <header>
@@ -57,12 +26,7 @@
       <section class="boards-section">
         <div class="board-container">
           <h2>Your board</h2>
-          <div id="player-player" class="board">
-            <script>
-                for (let i = 0; i < 100; i++) {
-                  document.write('<div class="cell"></div>');
-                }
-            </script>
+          <div id="board-player" class="board">
           </div>
         </div>
 
@@ -71,8 +35,7 @@
           <div id="board-enemy" class="board"></div>
         </div>
       </section>
-
-
+      <script src="main.js"></script>
     </main>
 </body>
 </html>
