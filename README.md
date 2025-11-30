@@ -1,1 +1,1 @@
-# projectPP
+# Battleship Battle Generator
