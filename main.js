@@ -1,14 +1,22 @@
-function createBoard(boardId) {
-  const board = document.getElementById(boardId);
+const letters = ["A","B","C","D","E","F","G","H","I","J"];
 
-  for (let i = 0; i < 100; i++) {
-    const cell = document.createElement("div");
-    cell.classList.add("cell");
-    board.appendChild(cell);
-  }
+function buildBoard(boardId) {
+const board = document.getElementById(boardId);
+
+board.innerHTML += `<div class="coord"></div>`;
+
+for (let i = 1; i <= 10; i++) {
+  board.innerHTML += `<div class="coord">${i}</div>`;
 }
 
-createBoard("board-player");
-createBoard("board-enemy");
+for (let r = 0; r < 10; r++) {
+  board.innerHTML += `<div class="coord">${letters[r]}</div>`;
 
+  for (let c = 0; c < 10; c++) {
+    board.innerHTML += `<div class="cell"></div>`;
+  }
+}
+}
 
+buildBoard("player-board");
+buildBoard("enemy-board");

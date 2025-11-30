@@ -6,36 +6,50 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-      <h1>Battleships</h1>
-    </header>
-    <main>
-      <!-- kairej -->
-      <aside class="sidebar">
 
-        <h3>Ships</h3>
-        <div class="ship-list">
-          <div class="ship" data-size="5">Carrier (5)</div>
-          <div class="ship" data-size="4">Battleship (4)</div>
-          <div class="ship" data-size="3">Cruiser (3)</div>
-          <div class="ship" data-size="3">Submarine (3)</div>
-          <div class="ship" data-size="2">Destroyer (2)</div>
-        </div>
-      </aside>
-      <!-- desinej -->
-      <section class="boards-section">
-        <div class="board-container">
-          <h2>Your board</h2>
-          <div id="board-player" class="board">
-          </div>
-        </div>
+<header>
+  <h1>Battleships</h1>
+</header>
 
-        <div class="board-container">
-          <h2>Enemy Board</h2>
-          <div id="board-enemy" class="board"></div>
-        </div>
-      </section>
-      <script src="main.js"></script>
-    </main>
+<main>
+
+  <aside class="sidebar">
+    <h3>Your ships</h3>
+    <div class="ship-list">
+      <div class="ship" data-size="5">Carrier (5)</div>
+      <div class="ship" data-size="4">Battleship (4)</div>
+      <div class="ship" data-size="3">Cruiser (3)</div>
+      <div class="ship" data-size="3">Submarine (3)</div>
+      <div class="ship" data-size="2">Destroyer (2)</div>
+    </div>
+	
+	<h3>Enemy ships</h3>
+    <div class="ship-list">
+      <div class="ship" data-size="5">Carrier (5)</div>
+      <div class="ship" data-size="4">Battleship (4)</div>
+      <div class="ship" data-size="3">Cruiser (3)</div>
+      <div class="ship" data-size="3">Submarine (3)</div>
+      <div class="ship" data-size="2">Destroyer (2)</div>
+    </div>
+	
+  </aside>
+
+  <section class="boards-section">
+
+    <div class="board-container">
+      <h2>Your Board</h2>
+      <div class="board-wrapper" id="player-board"></div>
+    </div>
+
+    <div class="board-container">
+      <h2>Enemy Board</h2>
+      <div class="board-wrapper" id="enemy-board"></div>
+    </div>
+
+  </section>
+
+</main>
+<script src="main.js"></script>
+
 </body>
 </html>

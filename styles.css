@@ -2,68 +2,80 @@ html {
     height: 100%;
 }
 body {
-  margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
   font-family: Arial, sans-serif;
-  background: #8ecae6;
   color: #222;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    height: 100%;
 }
 main {
     display: flex;
-    flex: 1;
     flex-direction: row;
-    min-width: 800px;
+    flex: 1;
+    height: 100%;
 }
 .boards-section {
-    color: #fb8500;
-    background-color: #023047;
     display: flex;
     flex-direction: row;
     text-align: center;
     width: 80%;
     height: 100%;
 }
-.board-container{
+.board-container {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    height: 100%;
+  background: #8ecae6;
 }
 .sidebar {
-    color: #fb8500;
-    background-color: #023047;
     width: 20%;
     text-align: center;
+    /*margin-top: 60px;*/
+    background-color: #023047;
+    color: #ffb703;
+    font-weight: bold;
 }
 header {
     text-align: center;
+    height: 80px;
+    background-color: #023047;
+    color: #ffb703;
 }
-.board {
+
+.board-wrapper {
   display: grid;
-  grid-template-columns: repeat(10, 30px);
-  grid-template-rows: repeat(10, 30px);
-  background: #fff;
-  border: 1px solid #000;
-  width: fit-content;
-  height: fit-content;
+  grid-template-columns: 30px repeat(10, 30px);
+  grid-template-rows: 30px repeat(10, 30px);
+  justify-content: center;
+  margin: 0 auto;
   background: #8ecae6;
+  box-sizing: border-box;
 }
+
+.coord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.ship {
+    margin-bottom: 5px;
+    color: #fb8500;
+}
+
 .cell {
   width: 30px;
   height: 30px;
-  border: 1px solid #000;  /* strong dark borders */
-  background: #e8eef5;
+  border: 1px solid #90e0ef;
   box-sizing: border-box;
-  background: #8ecae6;
 }
-.ship-list{
-    margin-left: 20px;
-    text-align: left;
-    font-weight: 800;
+
+#enemy-board .cell {
+border: 1px solid red;
 }
-.ship {
-    margin-bottom: 10px;
+
+#player-board .cell {
+border: 1px solid green;
 }
+
