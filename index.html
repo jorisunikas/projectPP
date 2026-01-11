@@ -1,55 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="lt">
 <head>
-  <meta charset="UTF-8">
-  <title>Battleships</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laivų mūšis</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header><h1>Laivų mūšis</h1></header>
+  <main>
+    <aside class="sidebar">
+      <h3>Your ships</h3>
+      <div class="ship">Carrier (5)</div>
+      <div class="ship">Battleship (4)</div>
+      <div class="ship">Cruiser (3)</div>
+      <div class="ship">Submarine (3)</div>
+      <div class="ship">Destroyer (2)</div>
+      <hr class="side-sep" />
+      <h3>Enemy ships</h3>
+      <div class="ship">Carrier (5)</div>
+      <div class="ship">Battleship (4)</div>
+      <div class="ship">Cruiser (3)</div>
+      <div class="ship">Submarine (3)</div>
+      <div class="ship">Destroyer (2)</div>
+    </aside>
 
-<header>
-  <h1>Battleships</h1>
-</header>
-
-<main>
-
-  <aside class="sidebar">
-    <h3>Your ships</h3>
-    <div class="ship-list">
-      <div class="ship" data-size="5">Carrier (5)</div>
-      <div class="ship" data-size="4">Battleship (4)</div>
-      <div class="ship" data-size="3">Cruiser (3)</div>
-      <div class="ship" data-size="3">Submarine (3)</div>
-      <div class="ship" data-size="2">Destroyer (2)</div>
-    </div>
-	
-	<h3>Enemy ships</h3>
-    <div class="ship-list">
-      <div class="ship" data-size="5">Carrier (5)</div>
-      <div class="ship" data-size="4">Battleship (4)</div>
-      <div class="ship" data-size="3">Cruiser (3)</div>
-      <div class="ship" data-size="3">Submarine (3)</div>
-      <div class="ship" data-size="2">Destroyer (2)</div>
-    </div>
-	
-  </aside>
-
-  <section class="boards-section">
-
-    <div class="board-container">
-      <h2>Your Board</h2>
-      <div class="board-wrapper" id="player-board"></div>
-    </div>
-
-    <div class="board-container">
-      <h2>Enemy Board</h2>
-      <div class="board-wrapper" id="enemy-board"></div>
-    </div>
-
-  </section>
-
-</main>
-<script src="main.js"></script>
-
+    <section class="boards-section">
+      <div class="board-container">
+        <h2>Player</h2>
+        <div id="player-board" class="board-wrapper"></div>
+      </div>
+      <div class="board-container">
+        <h2>Enemy</h2>
+        <div id="enemy-board" class="board-wrapper"></div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>

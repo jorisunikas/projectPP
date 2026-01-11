@@ -1,0 +1,88 @@
+html { height: 100%; }
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  height: 100%;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100%;
+}
+.sidebar {
+  width: 20%;
+  text-align: center;
+  background-color: #023047;
+  color: #ffb703;
+  font-weight: bold;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.side-sep {
+  border: none;
+  height: 1px;
+  background: rgba(255,183,3,0.35);
+  margin: 16px 0;
+}
+.ship { margin-bottom: 10px; color: #fb8500; }
+
+.boards-section {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 80%;
+  height: 100%;
+}
+.board-container {
+  width: 50%;
+  height: 100%;
+  background: #8ecae6;
+}
+header {
+  text-align: center;
+  height: 80px;
+  background-color: #023047;
+  color: #ffb703;
+}
+.board-wrapper {
+  display: grid;
+  grid-template-columns: 30px repeat(10, 30px);
+  grid-template-rows: 30px repeat(10, 30px);
+  justify-content: center;
+  margin: 0 auto;
+  background: #8ecae6;
+  box-sizing: border-box;
+}
+.coord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #90e0ef;
+  box-sizing: border-box;
+  position: relative;
+}
+#enemy-board .cell { border: 1px solid red; }
+#player-board .cell { border: 1px solid green; }
+
+.ship-cell::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #000;
+}
+.ship-single::after { border-radius: 999px; }
+.ship-h-mid::after { border-radius: 0; }
+.ship-h-start::after { border-top-left-radius: 999px; border-bottom-left-radius: 999px; border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.ship-h-end::after { border-top-right-radius: 999px; border-bottom-right-radius: 999px; border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.ship-v-mid::after { border-radius: 0; }
+.ship-v-start::after { border-top-left-radius: 999px; border-top-right-radius: 999px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.ship-v-end::after { border-bottom-left-radius: 999px; border-bottom-right-radius: 999px; border-top-left-radius: 0; border-top-right-radius: 0; }
